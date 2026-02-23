@@ -1,86 +1,56 @@
-# Fake News Detection using Machine Learning
+# Smart To-Do List Application
 
-This project implements a Natural Language Processing (NLP) pipeline to classify news articles as Fake or Real using supervised machine learning techniques.
+This project is a task management application designed to help users efficiently organize, track, and manage daily activities. The system allows users to add, update, delete, and mark tasks as completed.
 
-The model processes textual data, converts it into numerical representations, and predicts authenticity based on learned patterns.
+The goal of this project is to demonstrate structured application development, data handling, and user interaction logic implementation.
 
 ---
 
 ## Features
-- Text cleaning and preprocessing
-- Stopword removal
-- Tokenization
-- TF-IDF vectorization
-- Supervised model training
-- Accuracy and evaluation metrics
-- Prediction on custom news input
+- Add new tasks
+- Delete tasks
+- Mark tasks as completed
+- Display pending and completed tasks
+- Persistent task storage (if file/database used)
+- Simple and intuitive interface
 
 ---
 
 ## Technologies Used
 - Python
-- Pandas
-- NumPy
-- NLTK
-- Scikit-learn
-- Matplotlib / Seaborn
+- File Handling / JSON (if used)
+- Tkinter / CLI (depending on implementation)
+- Basic Data Structures
 
 ---
 
 ## Methodology
 
-### 1. Data Preprocessing
-- Remove punctuation and special characters
-- Convert text to lowercase
-- Remove stopwords
-- Tokenization
+### 1. Task Storage
+- Tasks stored using list or dictionary
+- Optional file-based persistence for saving tasks
 
-### 2. Feature Extraction
-- Convert text into numerical vectors using TF-IDF
+### 2. Core Operations
+- Add Task
+- Remove Task
+- Update Task Status
+- Display All Tasks
 
-### 3. Model Training
-- Split dataset into training and testing sets
-- Train classification model (Logistic Regression / Naive Bayes / etc.)
-- Evaluate using:
-  - Accuracy
-  - Precision
-  - Recall
-  - F1-score
-
-### 4. Prediction
-- Input new news article
-- Transform using trained TF-IDF vectorizer
-- Predict label (Fake / Real)
-
----
-
-## Model Pipeline
-
-- Load Dataset
-- Clean Text
-- Vectorize Text (TF-IDF)
-- Train Model
-- Evaluate Performance
-- Predict New Input
+### 3. Program Flow
+- User Input
+- Validation
+- Task Update
+- Display Output
 
 ---
 
 ## Project Structure
 
-fake-news-detection/
+to-do-list/
 │
-├── fake_new_detection.ipynb
-├── dataset.csv
-├── model.pkl (if saved)
-├── vectorizer.pkl (if saved)
+├── To_Do_List.ipynb
+├── tasks.json (if applicable)
 └── README.md
-
----
-
-## Results
-- Successfully classified news articles
-- Demonstrated strong performance on test dataset
-- Effective text pattern learning using TF-IDF
 
 ---
 
@@ -89,15 +59,23 @@ fake-news-detection/
 Open Jupyter Notebook:
 
 ```bash
-jupyter notebook fake_new_detection.ipynb
+jupyter notebook To_Do_List.ipynb
 ```
 
-Run all cells to train and evaluate the model.
+Run all cells and interact with the program.
+
+---
+
+## Outcome
+- Efficient task management
+- Demonstrates understanding of control flow and data handling
+- Practical implementation of basic application logic
 
 ---
 
 ## Future Improvements
-- Use LSTM / BERT models
-- Add cross-validation
-- Deploy as web application
-- Improve preprocessing pipeline
+- GUI-based interface
+- Reminder notifications
+- Deadline tracking
+- Priority tagging
+- Cloud synchronization
